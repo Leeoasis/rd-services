@@ -50,7 +50,7 @@ const ServicesPage = () => {
     <div className="services-page">
       {/* Hero Section */}
       <section className="relative py-20 bg-cover bg-center animate__animated animate__fadeIn" style={{ backgroundImage: `url(${PlumbingImage})` }}>
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="container mx-auto px-6 relative z-10">
           <h1 className="text-5xl font-bold text-center text-white animate__animated animate__fadeInUp mb-8">Our Comprehensive Services</h1>
           <p className="text-xl text-center text-white mb-12 animate__animated animate__fadeInUp animate__delay-1s">

@@ -119,9 +119,9 @@ const ProjectsPage = () => {
       {/* Hero Section */}
       <section
         className="relative py-24 bg-cover bg-center animate__animated animate__fadeIn"
-        style={{ backgroundImage: `url(${ProjectImage})` }}
+        style={{ backgroundImage: `url(${Magnolia1})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="container mx-auto px-6 relative z-10">
           <h1 className="text-5xl font-bold text-center text-white animate__animated animate__fadeInUp mb-8">
             Our Projects
