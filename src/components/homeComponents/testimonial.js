@@ -15,7 +15,7 @@ const Testimonial = () => (
             <img src={Person} alt="Client 1" className="w-16 h-16 rounded-full mr-4 animate-image-bounce" />
             <h3 className="text-xl font-semibold text-orange-700">Client Name</h3>
           </div>
-          <p className="text-lg mb-4">"P&T Plumbing Services exceeded our expectations. The team was professional, and the results were exceptional. Highly recommended!"</p>
+          <p className="text-lg mb-4">"RD Services exceeded our expectations. The team was professional, and the results were exceptional. Highly recommended!"</p>
         </div>
         <div className="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg max-w-md transform transition-transform duration-300 hover:scale-105">
           <div className="flex items-center mb-4">
@@ -29,7 +29,7 @@ const Testimonial = () => (
             <img src={Person} alt="Client 3" className="w-16 h-16 rounded-full mr-4 animate-image-bounce" />
             <h3 className="text-xl font-semibold text-orange-700">Client Name</h3>
           </div>
-          <p className="text-lg mb-4">"The team at P&T Plumbing Services did an incredible job with our tiling. Their attention to detail was impressive."</p>
+          <p className="text-lg mb-4">"The team at RD Services did an incredible job with our tiling. Their attention to detail was impressive."</p>
         </div>
       </div>
     </div>
