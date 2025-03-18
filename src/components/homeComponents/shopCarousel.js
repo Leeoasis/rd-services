@@ -15,21 +15,21 @@ const ShopCarousel = () => {
       title: 'Product 1',
       image: Product1,
       description: 'This is a great product that you will love.',
-      price: '$29.99',
+      price: 'R29.99',
     },
     {
       id: 2,
       title: 'Product 2',
       image: Product2,
       description: 'This product is even better than the first one.',
-      price: '$39.99',
+      price: 'R39.99',
     },
     {
       id: 3,
       title: 'Product 3',
       image: Product3,
       description: 'The best product in our shop.',
-      price: '$49.99',
+      price: 'R49.99',
     },
   ];
 
