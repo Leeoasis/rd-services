@@ -1,35 +1,70 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 // Import product images
-import Product1 from '../../assets/images/products/Tuscany3.jpg';
-import Product2 from '../../assets/images/products/Magnolia2.jpg';
-import Product3 from '../../assets/images/products/Tuscany2.jpg';
+import Product1 from '../../assets/images/products/product1.jpg';
+import Product2 from '../../assets/images/products/product2.jpg';
+import Product3 from '../../assets/images/products/product3.jpg';
+import Product4 from '../../assets/images/products/product4.jpg';
+import Product5 from '../../assets/images/products/product5.jpg';
 import BackgroundImage from '../../assets/images/test.jpg'; // Replace with your background image
 
 const ShopCarousel = () => {
+  const [centerSlidePercentage, setCenterSlidePercentage] = useState(33.33);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setCenterSlidePercentage(100);
+      } else {
+        setCenterSlidePercentage(33.33);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const products = [
     {
       id: 1,
-      title: 'Product 1',
+      title: 'Concrete stones 13mm',
       image: Product1,
-      description: 'This is a great product that you will love.',
-      price: 'R29.99',
+      description: 'High-quality 13mm concrete stones, perfect for construction and landscaping projects.',
+      price: 'R750.00 per cube',
     },
     {
       id: 2,
-      title: 'Product 2',
+      title: 'Mamasbery sand',
       image: Product2,
-      description: 'This product is even better than the first one.',
-      price: 'R39.99',
+      description: 'Premium Mamasbery sand, ideal for building and plastering applications.',
+      price: 'R600 per cube',
     },
     {
       id: 3,
-      title: 'Product 3',
+      title: 'Phillip sand',
       image: Product3,
-      description: 'The best product in our shop.',
-      price: 'R49.99',
+      description: 'Fine Phillip sand, suitable for a variety of construction and landscaping uses.',
+      price: 'R350 per cube',
+    },
+    {
+      id: 4,
+      title: 'Phillip sand',
+      image: Product4,
+      description: 'Another batch of fine Phillip sand, perfect for your construction needs.',
+      price: 'R300 per cube',
+    },
+    {
+      id: 5,
+      title: '19mm stones',
+      image: Product5,
+      description: 'Durable 19mm stones, great for concrete mixes and other construction projects.',
+      price: 'R800 per cube',
     },
   ];
 
@@ -47,7 +82,27 @@ const ShopCarousel = () => {
           transitionTime={600}
           className="product-carousel"
           centerMode={true}
-          centerSlidePercentage={33.33}
+          centerSlidePercentage={centerSlidePercentage}
+          renderArrowPrev={(onClickHandler, hasPrev, label) => hasPrev && (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white rounded-full p-2"
+            >
+              &#9664;
+            </button>
+          )}
+          renderArrowNext={(onClickHandler, hasNext, label) => hasNext && (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white rounded-full p-2"
+            >
+              &#9654;
+            </button>
+          )}
         >
           {products.map((product) => (
             <div key={product.id} className="bg-white p-4 mx-2 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
