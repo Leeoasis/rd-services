@@ -14,14 +14,14 @@ const HomePage = () => (
     {/* Why Go With Us Section */}
     <ChooseUs />
 
+    {/* Shop Carousel Section */}
+    <ShopCarousel />
+
     {/* Our Services Section */}
     <HomeServices />
 
     {/* Recent Projects Section */}
     <RecentProjects />
-
-    {/* Shop Carousel Section */}
-    <ShopCarousel />
 
     {/* Testimonials Section */}
     <Testimonial />
